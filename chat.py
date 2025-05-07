@@ -15,8 +15,8 @@ import faiss
 # Load environment variables
 
 # Configuration
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-HUGGING_FACE_TOKEN = os.getenv("HUGGING_FACE_TOKEN", "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")
+GROQ_API_KEY = "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"
+HUGGING_FACE_TOKEN = "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"
 DATA_DIR = "data"
 VECTOR_DB_PATH = os.path.join(DATA_DIR, "vector_db.pkl")
 DOCUMENTS_PATH = os.path.join(DATA_DIR, "documents.pkl")
