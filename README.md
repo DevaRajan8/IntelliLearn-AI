@@ -1,104 +1,106 @@
-# Multimodal RAG Application
+# 🚀 Tech Skill Navigator
 
-This application implements a complete Multimodal Retrieval Augmented Generation (RAG) pipeline that processes both text and images without using OCR for image content extraction.
+## Overview
 
-## Key Features
+Tech Skill Navigator is a multimodal learning application that helps tech enthusiasts explore and understand technological concepts through various interaction modes: text, voice, and image-based learning.
 
-- **Text and Image Processing**: Handle both text documents and images seamlessly
-- **Multimodal Embeddings**: Create embeddings for both text and images in a shared vector space
-- **Semantic Retrieval**: Retrieve relevant documents based on semantic similarity
-- **Multimodal LLM Integration**: Generate responses using Groq's LLM while considering both text and images
-- **User-Friendly Interface**: Easy-to-use Streamlit interface for document ingestion and querying
+## Features
 
-## Architecture
+- **Text Exploration**: Enter tech concepts and receive comprehensive explanations
+- **Voice Query**: Use speech recognition to explore tech topics
+- **Image-Based Learning**: Upload images to get object detection and tech insights
 
-The application follows this pipeline:
-
-1. **Document Ingestion**: Users can add text documents or images with descriptions
-2. **Embedding Generation**: The CLIP model encodes both text and images into the same embedding space
-3. **Vector Storage**: Embeddings are stored in a FAISS index for efficient retrieval
-4. **Query Processing**: User queries (text or text+image) are processed through the same embedding pipeline
-5. **Document Retrieval**: Most semantically similar documents are retrieved
-6. **Response Generation**: Retrieved documents are sent to Groq's LLM for final response generation
-
-## Setup and Installation
-
-### Prerequisites
+## Prerequisites
 
 - Python 3.8+
-- Groq API key
-- Hugging Face API token (for CLIP model)
+- API Keys:
+  - Groq API Key (Required)
+  - Hugging Face API Key (Recommended)
 
-### Installation
+## Installation
 
-1. Clone this repository
-   ```
-   git clone https://github.com/Devarajan8/Multimodal-RAG.git
-   cd multimodal-rag-app
-   ```
-
-2. Install dependencies
-   ```
-   pip install -r requirements.txt
-   ```
-
-3. Create a `.env` file with your API keys
-   ```
-   GROQ_API_KEY=your_groq_api_key
-   HUGGING_FACE_TOKEN=your_huggingface_token
-   ```
-
-4. Run the application
-   ```
-   streamlit run chat.py
-   ```
-
-## Usage Instructions
-
-### Adding Documents
-
-1. Use the sidebar to add documents:
-   - Text tab: Enter text content and click "Add Text Document"
-   - Image tab: Upload an image, optionally add a description, and click "Add Image Document"
-
-2. All documents are automatically embedded and stored in the vector database
-
-### Querying
-
-1. Enter your query in the text field
-2. Optionally upload an image to include with your query
-3. Adjust the number of documents to retrieve using the slider
-4. Click "Submit Query" to process your request
-5. View the generated response and the retrieved documents
-
-## Technical Details
-
-- **Embedding Model**: CLIP ViT-B/32 for both text and image embeddings (512 dimensions)
-- **Vector Database**: FAISS with inner product similarity (cosine similarity for normalized vectors)
-- **LLM**: Groq's llama3-8b-8192 model for response generation
-- **Document Storage**: Local file system with pickle serialization
-
-## Future Improvements
-
-- Integration with true multimodal LLMs for better image understanding
-- Chunk long documents for more precise retrieval
-- Add document deletion and editing capabilities
-- Implement user management and multi-user support
-- Add memory and conversation history for contextual queries
-
-## Requirements
-
+1. Clone the repository:
+```bash
+git clone https://github.com/Devarajan8/IntelliLearn-AI.git
+cd tech-skill-navigator
 ```
-streamlit>=1.28.0
-pillow>=9.0.0
-numpy>=1.22.0
-requests>=2.28.0
-sentence-transformers>=2.2.0
-faiss-cpu>=1.7.0
-python-dotenv>=1.0.0
-uuid>=1.30
+
+2. Create a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 ```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Set up environment variables:
+- Create a `.env` file in the project root
+- Add your Groq API key:
+```
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+## Running the Application
+
+```bash
+streamlit run main.py
+```
+
+## Dependencies
+
+- Streamlit
+- Requests
+- SpeechRecognition
+- NumPy
+- Pillow
+- OpenCV
+- PyAudio
+
+## API Services Used
+
+- Groq API (for language model interactions)
+- Hugging Face Inference API (for object detection)
+- Google Speech Recognition
+
+## Modes of Learning
+
+1. **Text Exploration**
+   - Enter tech concepts
+   - Get detailed explanations
+   - Receive learning resources
+
+2. **Voice Query**
+   - Speak your tech query
+   - Get instant explanations
+
+3. **Image-Based Learning**
+   - Upload tech-related images
+   - Detect objects
+   - Generate insights about detected objects
+
+## Troubleshooting
+
+- Ensure all dependencies are installed
+- Check API key configurations
+- Verify microphone permissions for voice queries
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License.
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+Your Name - your.email@example.com
+
+Project Link: [https://github.com/yourusername/tech-skill-navigator](https://github.com/yourusername/tech-skill-navigator)
