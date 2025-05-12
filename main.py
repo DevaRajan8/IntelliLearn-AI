@@ -11,7 +11,7 @@ class TechSkillNavigator:
     def __init__(self):
         # Set up API credentials
         self.groq_api_key = os.getenv("GROQ_API_KEY")
-        self.huggingface_api_key = "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"
+        self.huggingface_api_key = "api key here (hf)"
         
         # Speech recognition setup
         self.recognizer = sr.Recognizer()
