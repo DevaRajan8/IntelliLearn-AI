@@ -102,6 +102,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - your.email@example.com
-
-Project Link: [https://github.com/yourusername/tech-skill-navigator](https://github.com/yourusername/tech-skill-navigator)
+Devarajan S - devarajan8.official@gmail.com
