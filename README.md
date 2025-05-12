@@ -41,6 +41,7 @@ pip install -r requirements.txt
 - Add your Groq API key:
 ```
 GROQ_API_KEY=your_groq_api_key_here
+huggingface_api_key=your_hf_api_key
 ```
 
 ## Running the Application
